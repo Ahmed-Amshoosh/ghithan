@@ -252,21 +252,21 @@
     }
 
     .btn-primary {
-      background: linear-gradient(45deg, var(--primary-gold), #e6c35c);
+      background: linear-gradient(45deg, var(--primary-gold), #356977);
       border: none;
-      color: #000;
+      color: #ffffff;
       font-weight: 700;
       padding: 0.8rem 2rem;
       border-radius: 50px;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+      box-shadow: 0 4px 20px #1e86a3;
       position: relative;
       overflow: hidden;
     }
 
     .btn-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+      box-shadow: 0 8px 25px #1e86a3;
     }
 
     .btn-primary::before {
@@ -1438,6 +1438,7 @@
 
     .footer-links a {
       color: var(--text-gray);
+      font-weight: 600;
       text-decoration: none;
       transition: all 0.3s ease;
       display: block;
@@ -1688,6 +1689,9 @@
       .social-links-container {
         grid-template-columns: repeat(auto-fill, minmax(95%, 1fr));
       }
+    }
+    .swiper {
+      padding: 15px;
     }
   </style>
   <style>
@@ -2828,6 +2832,554 @@
     </div>
   </section>
 
+  <!-- Clients/Partners Section -->
+
+  <style>/* Clients/Partners Section Styles - Updated for Swiper */
+  .clients-section {
+    background: linear-gradient(145deg, var(--darker-bg), var(--dark-bg));
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .section-deco {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+    opacity: 0.1;
+    filter: blur(30px);
+  }
+
+  .deco-1 {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(45deg, var(--primary-gold), var(--accent-cyan));
+    top: -100px;
+    right: 5%;
+  }
+
+  .deco-2 {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(45deg, var(--accent-purple), var(--accent-blue));
+    bottom: -80px;
+    left: 8%;
+  }
+
+  /* Swiper Container */
+  .clients-slider {
+    padding: 40px 0;
+    margin: 50px 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .client-card {
+    background: linear-gradient(145deg, rgba(30, 30, 45, 0.8), rgba(20, 20, 30, 0.8));
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    width: 240px;
+    max-width: 240px;
+  }
+
+  .client-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(212, 175, 55, 0.2);
+    z-index: 10;
+  }
+
+  .client-logo {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+
+  .client-card:hover .client-logo {
+    transform: scale(1.1) rotate(3deg);
+  }
+
+  .client-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: brightness(1.1);
+    transition: all 0.4s ease;
+  }
+
+  .client-card:hover .client-logo img {
+    filter: brightness(1.3) contrast(1.1);
+  }
+
+  .client-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(10, 10, 18, 0.95), transparent 80%);
+    padding: 30px 20px 20px;
+    color: white;
+    transition: all 0.4s ease;
+    transform: translateY(20px);
+    opacity: 0;
+    z-index: 1;
+  }
+
+  .client-card:hover .client-overlay {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .client-info h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 5px;
+  }
+
+  .client-info p {
+    color: var(--accent-cyan);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  /* Swiper Navigation */
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: var(--primary-gold);
+    background: rgba(0, 0, 0, 0.3);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin-top: -25px;
+  }
+
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    background: var(--primary-gold);
+    color: #000;
+  }
+
+  .swiper-button-prev {
+    left: -25px;
+  }
+
+  .swiper-button-next {
+    right: -25px;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    display: none;
+  }
+
+  .swiper-pagination {
+    position: relative;
+    margin-top: 30px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: var(--primary-gold);
+    width: 30px;
+    border-radius: 10px;
+  }
+
+  .clients-testimonial {
+    background: linear-gradient(145deg, rgba(30, 30, 45, 0.8), rgba(20, 20, 30, 0.8));
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 40px;
+    margin-top: 50px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .clients-testimonial::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-gold), transparent);
+  }
+
+  .client-quote {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 4rem;
+    color: rgba(212, 175, 55, 0.15);
+    font-family: serif;
+    transform: rotate(180deg);
+    z-index: 1;
+  }
+
+  .clients-testimonial p {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    font-style: italic;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px;
+    font-weight: 300;
+  }
+
+  .client-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .author-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--primary-gold);
+  }
+
+  .author-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 5px;
+  }
+
+  .author-info {
+    text-align: left;
+  }
+
+  .author-info h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 3px;
+  }
+
+  .author-info span {
+    color: var(--accent-cyan);
+    font-weight: 500;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .client-card {
+      width: 200px;
+      max-width: 200px;
+    }
+
+    .clients-testimonial {
+      padding: 30px 20px;
+    }
+
+    .clients-testimonial p {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .clients-slider {
+      padding: 30px 0;
+    }
+
+    .client-card {
+      width: 180px;
+      max-width: 180px;
+    }
+
+    .section-padding {
+      padding: 80px 0;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+  @media (max-width: 576px) {
+    .client-card {
+      width: 150px;
+      max-width: 150px;
+    }
+
+    .client-logo {
+      width: 120px;
+      height: 120px;
+    }
+
+    .clients-testimonial {
+      padding: 25px 15px;
+    }
+
+    .clients-testimonial p {
+      font-size: 1.1rem;
+    }
+
+    .section-deco {
+      display: none;
+    }
+
+    .client-author {
+      flex-direction: column;
+      text-align: center;
+    }
+
+
+  }
+  </style>
+  <!-- Clients/Partners Section with Working Slider -->
+  <section class="clients-section" id="clients">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">شركاؤنا <span>الاستراتيجيون</span></h2>
+        <p class="section-subtitle">نفتخر بالتعاون مع هذه العلامات التجارية الرائدة</p>
+      </div>
+
+      <!-- Swiper Container -->
+      <div class="swiper clients-slider">
+        <div class="swiper-wrapper">
+          <!-- Client Logo 1 -->
+          <div class="swiper-slide">
+            <div class="client-card">
+              <div class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="جوجل">
+              </div>
+              <div class="client-overlay">
+                <div class="client-info">
+                  <h4>جوجل</h4>
+                  <p>مشاريع هوية بصرية متعددة</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Client Logo 2 -->
+          <div class="swiper-slide">
+            <div class="client-card">
+              <div class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" alt="أمازون">
+              </div>
+              <div class="client-overlay">
+                <div class="client-info">
+                  <h4>أمازون</h4>
+                  <p>تصاميم تسويقية رقمية</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Client Logo 3 -->
+          <div class="swiper-slide">
+            <div class="client-card">
+              <div class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png" alt="نتفليكس">
+              </div>
+              <div class="client-overlay">
+                <div class="client-info">
+                  <h4>نتفليكس</h4>
+                  <p>حملات إعلانية متكاملة</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Client Logo 4 -->
+          <div class="swiper-slide">
+            <div class="client-card">
+              <div class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png" alt="إنستغرام">
+              </div>
+              <div class="client-overlay">
+                <div class="client-info">
+                  <h4>إنستغرام</h4>
+                  <p>هوية بصرية مبتكرة</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Client Logo 5 -->
+          <div class="swiper-slide">
+            <div class="client-card">
+              <div class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="بوكيمون">
+              </div>
+              <div class="client-overlay">
+                <div class="client-info">
+                  <h4>بوكيمون</h4>
+                  <p>تصاميم ملابس ومنتجات</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Client Logo 6 -->
+          <div class="swiper-slide">
+            <div class="client-card">
+              <div class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Adidas_Logo_%282017%29.svg/2560px-Adidas_Logo_%282017%29.svg.png" alt="أديداس">
+              </div>
+              <div class="client-overlay">
+                <div class="client-info">
+                  <h4>أديداس</h4>
+                  <p>مشاريع تسويق رياضي</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Client Logo 7 -->
+          <div class="swiper-slide">
+            <div class="client-card">
+              <div class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/2560px-Apple_logo_black.svg.png" alt="آبل">
+              </div>
+              <div class="client-overlay">
+                <div class="client-info">
+                  <h4>آبل</h4>
+                  <p>تصميم تطبيقات مبتكرة</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Client Logo 8 -->
+          <div class="swiper-slide">
+            <div class="client-card">
+              <div class="client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Microsoft_logo_%282012%29.svg/2560px-Microsoft_logo_%282012%29.svg.png" alt="مايكروسوفت">
+              </div>
+              <div class="client-overlay">
+                <div class="client-info">
+                  <h4>مايكروسوفت</h4>
+                  <p>واجهات مستخدم احترافية</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- Navigation buttons -->
+        <div class="swiper-button-prev">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+        <div class="swiper-button-next">
+          <i class="fas fa-arrow-left"></i>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Floating decorative elements -->
+    <div class="section-deco deco-1"></div>
+    <div class="section-deco deco-2"></div>
+  </section>
+  <script>// Initialize Swiper for Clients Section
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize the clients slider
+    new Swiper('.clients-slider', {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1.2,
+          spaceBetween: 20,
+        },
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 25,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        }
+      }
+    });
+
+    // Animation on scroll for the clients section
+    const animateClientSection = () => {
+      const section = document.querySelector('.clients-section');
+      if (!section) return;
+
+      const sectionPosition = section.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight / 1.3;
+
+      if (sectionPosition < screenPosition) {
+        section.querySelectorAll('.client-card').forEach(el => {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        });
+      }
+    };
+
+    // Initial animation
+    window.addEventListener('load', animateClientSection);
+
+    // Animation on scroll
+    window.addEventListener('scroll', animateClientSection);
+  });</script>
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
@@ -2871,9 +3423,9 @@
         <div class="col-lg-3 col-md-4">
           <h4 class="footer-title">معلومات التواصل</h4>
           <ul class="footer-links">
-            <li><i class="fas fa-envelope me-2 text-warning"></i> ahmed@design.com</li>
-            <li><i class="fas fa-phone me-2 text-warning"></i> +966 5X XXX XXXX</li>
-            <li><i class="fas fa-map-marker-alt me-2 text-warning"></i> الرياض، المملكة العربية السعودية</li>
+            <li><i class="fas fa-envelope me-2"></i> ahmed@design.com</li>
+            <li><i class="fas fa-phone me-2"></i> +966 5X XXX XXXX</li>
+            <li><i class="fas fa-map-marker-alt me-2"></i> الرياض، المملكة العربية السعودية</li>
 
           </ul>
         </div>
