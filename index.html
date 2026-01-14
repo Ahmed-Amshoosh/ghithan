@@ -1946,7 +1946,7 @@
       position: absolute;
       bottom: -8px;
       left: 0;
-      width: 100%;
+      width: 40%;
       height: 4px;
       background: linear-gradient(to right, var(--primary-gold), transparent);
       border-radius: 2px;
@@ -2864,6 +2864,7 @@
       background: linear-gradient(145deg, var(--darker-bg), var(--dark-bg));
       padding: 120px 0;
       position: relative;
+      text-align: center;
       overflow: hidden;
       z-index: 1;
     }
@@ -2890,39 +2891,6 @@
       background: linear-gradient(45deg, var(--accent-purple), var(--accent-blue));
       bottom: -80px;
       left: 8%;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 50px;
-      position: relative;
-    }
-
-    .section-title {
-      position: relative;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2.8rem;
-      font-weight: 800;
-      margin-bottom: 15px;
-      text-align: center;
-      color: var(--text-light);
-      display: inline-block;
-    }
-
-    .section-title span {
-      background: linear-gradient(to right, var(--primary-gold), var(--accent-cyan));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      position: relative;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      color: var(--text-gray);
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1.2rem;
-      line-height: 1.7;
     }
 
     /* Swiper Container */
@@ -3105,18 +3073,6 @@
     }
 
     @media (max-width: 576px) {
-      .section-header {
-        padding: 0 20px;
-      }
-
-      .section-title {
-        font-size: 2rem;
-      }
-
-      .section-subtitle {
-        font-size: 1rem;
-        padding: 0 15px;
-      }
 
       .clients-section {
         padding: 80px 0;
@@ -3148,10 +3104,9 @@
   <!-- Clients/Partners Section with Working Slider -->
   <section class="clients-section" id="clients">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">شركاؤنا <span>الاستراتيجيون</span></h2>
-        <p class="section-subtitle">نفتخر بالتعاون مع هذه العلامات التجارية الرائدة</p>
-      </div>
+        <h2 class="section-title scale-in">شركاؤنا <span>الاستراتيجيون</span></h2>
+        <p class="section-subtitle scale-in">نفتخر بالتعاون مع هذه العلامات التجارية الرائدة</p>
+
 
       <!-- Swiper Container -->
       <div class="swiper clients-slider">
