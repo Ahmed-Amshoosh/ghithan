@@ -1354,36 +1354,37 @@
       color: var(--text-light);
     }
 
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100px;
-      height: 4px;
-      background: linear-gradient(to right, transparent, var(--primary-gold), transparent);
-      border-radius: 2px;
-    }
+    /*.section-title::after {*/
+    /*  content: '';*/
+    /*  position: absolute;*/
+    /*  bottom: -15px;*/
+    /*  left: 50%;*/
+    /*  transform: translateX(-50%);*/
+    /*  width: 100px;*/
+    /*  height: 4px;*/
+    /*  background: linear-gradient(to right, transparent, var(--primary-gold), transparent);*/
+    /*  border-radius: 2px;*/
+    /*}*/
 
     .section-title span {
       background: linear-gradient(to right, var(--primary-gold), var(--accent-cyan));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       position: relative;
+      font-weight: bold;
     }
 
-    .section-title span::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(to right, var(--primary-gold), transparent);
-      border-radius: 3px;
-      opacity: 0.7;
-    }
+    /*.section-title span::after {*/
+    /*  content: '';*/
+    /*  position: absolute;*/
+    /*  bottom: -10px;*/
+    /*  left: 0;*/
+    /*  width: 100%;*/
+    /*  height: 3px;*/
+    /*  background: linear-gradient(to right, var(--primary-gold), transparent);*/
+    /*  border-radius: 3px;*/
+    /*  opacity: 0.7;*/
+    /*}*/
 
     .section-subtitle {
       text-align: center;
@@ -1941,16 +1942,16 @@
       display: inline-block;
     }
 
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 40%;
-      height: 4px;
-      background: linear-gradient(to right, var(--primary-gold), transparent);
-      border-radius: 2px;
-    }
+    /*.section-title::after {*/
+    /*  content: '';*/
+    /*  position: absolute;*/
+    /*  bottom: -8px;*/
+    /*  left: 0;*/
+    /*  width: 40%;*/
+    /*  height: 4px;*/
+    /*  background: linear-gradient(to right, var(--primary-gold), transparent);*/
+    /*  border-radius: 2px;*/
+    /*}*/
 
     .section-subtitle {
       color: var(--text-gray);
@@ -2115,8 +2116,9 @@
 
     .tools-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(147px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(165px, 165px));
       gap: 20px;
+      justify-content: center;
     }
 
     .tool-card {
@@ -2449,27 +2451,6 @@
                     <i class="fas fa-film"></i>
                   </div>
                   <div class="tool-name">After Effects</div>
-                </div>
-
-                <div class="tool-card">
-                  <div class="tool-icon">
-                    <i class="fab fa-figma"></i>
-                  </div>
-                  <div class="tool-name">Figma</div>
-                </div>
-
-                <div class="tool-card">
-                  <div class="tool-icon">
-                    <i class="fas fa-cube"></i>
-                  </div>
-                  <div class="tool-name">Blender</div>
-                </div>
-
-                <div class="tool-card">
-                  <div class="tool-icon">
-                    <i class="fas fa-vector-square"></i>
-                  </div>
-                  <div class="tool-name">InDesign</div>
                 </div>
 
                 <div class="tool-card">
@@ -3101,124 +3082,124 @@
   </style>
 
 
-  <!-- Clients/Partners Section with Working Slider -->
-  <section class="clients-section" id="clients">
-    <div class="container">
-        <h2 class="section-title scale-in">شركاؤنا <span>الاستراتيجيون</span></h2>
-        <p class="section-subtitle scale-in">نفتخر بالتعاون مع هذه العلامات التجارية الرائدة</p>
+<!--  &lt;!&ndash; Clients/Partners Section with Working Slider &ndash;&gt;-->
+<!--  <section class="clients-section" id="clients">-->
+<!--    <div class="container">-->
+<!--        <h2 class="section-title scale-in">شركاؤنا <span>الاستراتيجيون</span></h2>-->
+<!--        <p class="section-subtitle scale-in">نفتخر بالتعاون مع هذه العلامات التجارية الرائدة</p>-->
 
 
-      <!-- Swiper Container -->
-      <div class="swiper clients-slider">
-        <div class="swiper-wrapper">
-          <!-- Client Logo 1 -->
-          <div class="swiper-slide">
-            <div class="client-card">
-              <div class="client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="جوجل">
-              </div>
-              <div class="client-overlay">
-                <div class="client-info">
-                  <h4>جوجل</h4>
-                  <p>مشاريع هوية بصرية متعددة</p>
-                </div>
-              </div>
-            </div>
-          </div>
+<!--      &lt;!&ndash; Swiper Container &ndash;&gt;-->
+<!--      <div class="swiper clients-slider">-->
+<!--        <div class="swiper-wrapper">-->
+<!--          &lt;!&ndash; Client Logo 1 &ndash;&gt;-->
+<!--          <div class="swiper-slide">-->
+<!--            <div class="client-card">-->
+<!--              <div class="client-logo">-->
+<!--                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="جوجل">-->
+<!--              </div>-->
+<!--              <div class="client-overlay">-->
+<!--                <div class="client-info">-->
+<!--                  <h4>جوجل</h4>-->
+<!--                  <p>مشاريع هوية بصرية متعددة</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
 
-          <!-- Client Logo 2 -->
-          <div class="swiper-slide">
-            <div class="client-card">
-              <div class="client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" alt="أمازون">
-              </div>
-              <div class="client-overlay">
-                <div class="client-info">
-                  <h4>أمازون</h4>
-                  <p>تصاميم تسويقية رقمية</p>
-                </div>
-              </div>
-            </div>
-          </div>
+<!--          &lt;!&ndash; Client Logo 2 &ndash;&gt;-->
+<!--          <div class="swiper-slide">-->
+<!--            <div class="client-card">-->
+<!--              <div class="client-logo">-->
+<!--                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" alt="أمازون">-->
+<!--              </div>-->
+<!--              <div class="client-overlay">-->
+<!--                <div class="client-info">-->
+<!--                  <h4>أمازون</h4>-->
+<!--                  <p>تصاميم تسويقية رقمية</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
 
-          <!-- Client Logo 3 -->
-          <div class="swiper-slide">
-            <div class="client-card">
-              <div class="client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png" alt="نتفليكس">
-              </div>
-              <div class="client-overlay">
-                <div class="client-info">
-                  <h4>نتفليكس</h4>
-                  <p>حملات إعلانية متكاملة</p>
-                </div>
-              </div>
-            </div>
-          </div>
+<!--          &lt;!&ndash; Client Logo 3 &ndash;&gt;-->
+<!--          <div class="swiper-slide">-->
+<!--            <div class="client-card">-->
+<!--              <div class="client-logo">-->
+<!--                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png" alt="نتفليكس">-->
+<!--              </div>-->
+<!--              <div class="client-overlay">-->
+<!--                <div class="client-info">-->
+<!--                  <h4>نتفليكس</h4>-->
+<!--                  <p>حملات إعلانية متكاملة</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
 
-          <!-- Client Logo 4 -->
-          <div class="swiper-slide">
-            <div class="client-card">
-              <div class="client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png" alt="إنستغرام">
-              </div>
-              <div class="client-overlay">
-                <div class="client-info">
-                  <h4>إنستغرام</h4>
-                  <p>هوية بصرية مبتكرة</p>
-                </div>
-              </div>
-            </div>
-          </div>
+<!--          &lt;!&ndash; Client Logo 4 &ndash;&gt;-->
+<!--          <div class="swiper-slide">-->
+<!--            <div class="client-card">-->
+<!--              <div class="client-logo">-->
+<!--                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png" alt="إنستغرام">-->
+<!--              </div>-->
+<!--              <div class="client-overlay">-->
+<!--                <div class="client-info">-->
+<!--                  <h4>إنستغرام</h4>-->
+<!--                  <p>هوية بصرية مبتكرة</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
 
-          <!-- Client Logo 5 -->
-          <div class="swiper-slide">
-            <div class="client-card">
-              <div class="client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="بوكيمون">
-              </div>
-              <div class="client-overlay">
-                <div class="client-info">
-                  <h4>بوكيمون</h4>
-                  <p>تصاميم ملابس ومنتجات</p>
-                </div>
-              </div>
-            </div>
-          </div>
+<!--          &lt;!&ndash; Client Logo 5 &ndash;&gt;-->
+<!--          <div class="swiper-slide">-->
+<!--            <div class="client-card">-->
+<!--              <div class="client-logo">-->
+<!--                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="بوكيمون">-->
+<!--              </div>-->
+<!--              <div class="client-overlay">-->
+<!--                <div class="client-info">-->
+<!--                  <h4>بوكيمون</h4>-->
+<!--                  <p>تصاميم ملابس ومنتجات</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
 
-          <!-- Client Logo 6 -->
-          <div class="swiper-slide">
-            <div class="client-card">
-              <div class="client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/2560px-Apple_logo_black.svg.png" alt="آبل">
-              </div>
-              <div class="client-overlay">
-                <div class="client-info">
-                  <h4>آبل</h4>
-                  <p>تصميم تطبيقات مبتكرة</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+<!--          &lt;!&ndash; Client Logo 6 &ndash;&gt;-->
+<!--          <div class="swiper-slide">-->
+<!--            <div class="client-card">-->
+<!--              <div class="client-logo">-->
+<!--                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/2560px-Apple_logo_black.svg.png" alt="آبل">-->
+<!--              </div>-->
+<!--              <div class="client-overlay">-->
+<!--                <div class="client-info">-->
+<!--                  <h4>آبل</h4>-->
+<!--                  <p>تصميم تطبيقات مبتكرة</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
 
-        <!-- Pagination -->
-        <div class="swiper-pagination"></div>
+<!--        &lt;!&ndash; Pagination &ndash;&gt;-->
+<!--        <div class="swiper-pagination"></div>-->
 
-        <!-- Navigation buttons -->
-        <div class="swiper-button-prev">
-          <i class="fas fa-arrow-right"></i>
-        </div>
-        <div class="swiper-button-next">
-          <i class="fas fa-arrow-left"></i>
-        </div>
-      </div>
-    </div>
+<!--        &lt;!&ndash; Navigation buttons &ndash;&gt;-->
+<!--        <div class="swiper-button-prev">-->
+<!--          <i class="fas fa-arrow-right"></i>-->
+<!--        </div>-->
+<!--        <div class="swiper-button-next">-->
+<!--          <i class="fas fa-arrow-left"></i>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
 
-    <!-- Floating decorative elements -->
-    <div class="section-deco deco-1"></div>
-    <div class="section-deco deco-2"></div>
-  </section>
+<!--    &lt;!&ndash; Floating decorative elements &ndash;&gt;-->
+<!--    <div class="section-deco deco-1"></div>-->
+<!--    <div class="section-deco deco-2"></div>-->
+<!--  </section>-->
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
