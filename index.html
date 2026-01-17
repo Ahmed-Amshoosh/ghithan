@@ -200,7 +200,7 @@
       backdrop-filter: blur(10px);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
       transition: all 0.3s ease;
-      padding: 1rem 0;
+      padding: 0;
       position: fixed;
       width: 100%;
       top: 0;
@@ -208,13 +208,8 @@
     }
 
     .navbar-brand {
-      
-      font-weight: 800;
-      font-size: 1.9rem;
-      width: 200px;
-      color: var(--primary-gold) !important;
-      display: flex;
-      align-items: center;
+      width: 180px;
+      padding: 0;
     }
     @media (max-width: 500px) {
       .navbar-brand {
@@ -1257,10 +1252,12 @@
 
     .social-links-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(18%, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 180px));
       gap: 25px;
       margin-top: 40px;
+      justify-content: center;
     }
+
 
     .social-link-item {
       background: linear-gradient(145deg, rgba(30, 30, 45, 0.7), rgba(20, 20, 30, 0.7));
@@ -2476,13 +2473,13 @@
         <h2 class="section-title slide-up">معرض <span>الأعمال</span></h2>
         <p class="section-subtitle slide-up">مجموعة مختارة من أحدث المشاريع التي عملت عليها</p>
 
-        <div class="portfolio-tabs">
-          <button class="portfolio-tab active" data-filter="all">الكل</button>
-          <button class="portfolio-tab" data-filter="logo">الشعارات</button>
-          <button class="portfolio-tab" data-filter="social">السوشيال ميديا</button>
-          <button class="portfolio-tab" data-filter="poster">البوسترات</button>
-          <button class="portfolio-tab" data-filter="ui">واجهات UI/UX</button>
-        </div>
+<!--        <div class="portfolio-tabs">-->
+<!--          <button class="portfolio-tab active" data-filter="all">الكل</button>-->
+<!--          <button class="portfolio-tab" data-filter="logo">الشعارات</button>-->
+<!--          <button class="portfolio-tab" data-filter="social">السوشيال ميديا</button>-->
+<!--          <button class="portfolio-tab" data-filter="poster">البوسترات</button>-->
+<!--          <button class="portfolio-tab" data-filter="ui">واجهات UI/UX</button>-->
+<!--        </div>-->
       </div>
 
       <div class="portfolio-grid">
@@ -2614,20 +2611,25 @@
           <div class="service-card fade-in">
             <div class="service-number">05</div>
             <div class="service-icon floating floating-5">
-              <i class="fas fa-mobile-alt"></i>
+              <i class="fas fa-video"></i>
             </div>
-            <h3 class="service-title">واجهات UI/UX</h3>
-            <p class="service-desc">واجهات مستخدم سلسة وتجربة مستخدم استثنائية لمواقع الويب وتطبيقات الهاتف</p>
+            <h3 class="service-title">تصميم الفيديوهات</h3>
+            <p class="service-desc">
+              تصميم وإنتاج فيديوهات احترافية تعكس هوية علامتك وتناسب الإعلانات، المواقع، ومنصات التواصل الاجتماعي
+            </p>
           </div>
 
           <div class="service-card fade-in">
             <div class="service-number">06</div>
             <div class="service-icon floating">
-              <i class="fas fa-print"></i>
+              <i class="fas fa-film"></i>
             </div>
-            <h3 class="service-title">طباعة وتسويق</h3>
-            <p class="service-desc">تصاميم جاهزة للطباعة لمنتجات التسويق مثل التيشرتات، الأكواب، والملصقات</p>
+            <h3 class="service-title">مونتاج الريلز</h3>
+            <p class="service-desc">
+              مونتاج ريلز قصيرة وجذابة لمنصات التواصل الاجتماعي بأسلوب إبداعي يزيد من التفاعل والانتشار
+            </p>
           </div>
+
         </div>
       </div>
     </div>
@@ -2772,7 +2774,7 @@
       <p class="section-subtitle scale-in">استعد لتحويل أفكارك إلى واقع ملموس عبر التصميم</p>
 
       <div class="contact-container">
-        <div class="social-links-container">
+        <div class="social-links-container text-center">
           <div class="social-link-item fade-in">
             <div class="social-icon">
               <i class="fab fa-whatsapp"></i>
@@ -2791,23 +2793,23 @@
             <span class="social-handle">@ahmed.design</span>
           </div>
 
-          <div class="social-link-item fade-in">
-            <div class="social-icon">
-              <i class="fab fa-linkedin-in"></i>
-            </div>
-            <h3 class="social-title">لينكدإن</h3>
-            <p class="social-desc">للتواصل المهني والشراكات</p>
-            <span class="social-handle">Ahmed Al-Ali</span>
-          </div>
+<!--          <div class="social-link-item fade-in">-->
+<!--            <div class="social-icon">-->
+<!--              <i class="fab fa-linkedin-in"></i>-->
+<!--            </div>-->
+<!--            <h3 class="social-title">لينكدإن</h3>-->
+<!--            <p class="social-desc">للتواصل المهني والشراكات</p>-->
+<!--            <span class="social-handle">Ahmed Al-Ali</span>-->
+<!--          </div>-->
 
-          <div class="social-link-item fade-in">
-            <div class="social-icon">
-              <i class="fab fa-behance"></i>
-            </div>
-            <h3 class="social-title">بيهانس</h3>
-            <p class="social-desc">عرض مشاريعي الكاملة مع التفاصيل</p>
-            <span class="social-handle">ahmed-ali-design</span>
-          </div>
+<!--          <div class="social-link-item fade-in">-->
+<!--            <div class="social-icon">-->
+<!--              <i class="fab fa-behance"></i>-->
+<!--            </div>-->
+<!--            <h3 class="social-title">بيهانس</h3>-->
+<!--            <p class="social-desc">عرض مشاريعي الكاملة مع التفاصيل</p>-->
+<!--            <span class="social-handle">ahmed-ali-design</span>-->
+<!--          </div>-->
 
           <div class="social-link-item fade-in">
             <div class="social-icon">
@@ -3288,8 +3290,8 @@
             <a href="#" class="social-icon-footer" title="واتساب"><i class="fab fa-whatsapp"></i></a>
             <a href="#" class="social-icon-footer" title="إنستغرام"><i class="fab fa-instagram"></i></a>
             <a href="#" class="social-icon-footer" title="بريد إلكتروني"><i class="fas fa-envelope"></i></a>
-            <a href="#" class="social-icon-footer" title="لينكدإن"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="social-icon-footer" title="بيهانس"><i class="fab fa-behance"></i></a>
+<!--            <a href="#" class="social-icon-footer" title="لينكدإن"><i class="fab fa-linkedin-in"></i></a>-->
+<!--            <a href="#" class="social-icon-footer" title="بيهانس"><i class="fab fa-behance"></i></a>-->
           </div>
         </div>
 
@@ -3310,8 +3312,8 @@
             <li><a href="#services">تصميم الشعارات</a></li>
             <li><a href="#services">الهوية البصرية</a></li>
             <li><a href="#services">تصاميم السوشيال ميديا</a></li>
-            <li><a href="#services">واجهات UI/UX</a></li>
-            <li><a href="#services">الطباعة والتسويق</a></li>
+            <li><a href="#services">تصميم الفيديوهات</a></li>
+            <li><a href="#services">مونتاج الريلز</a></li>
           </ul>
         </div>
 
