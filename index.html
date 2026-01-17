@@ -2241,6 +2241,24 @@
     #scrollTopBtn:hover {
       transform: translateY(-3px);
     }
+    .hero-title {
+      line-height: 1.25;
+      font-weight: 800;
+    }
+
+    .grad-gold {
+      font-weight: 600;
+      background: linear-gradient(to right, var(--primary-gold), var(--accent-cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .grad-cyan {
+      font-weight: 600;
+      background: linear-gradient(to right, var(--accent-cyan), var(--primary-gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
   </style>
 </head>
@@ -2301,7 +2319,11 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-badge">تصميمات لا تُنسى</div>
-        <h1 class="hero-title fade-in">تصميمات <span style="background: linear-gradient(to right, var(--primary-gold), var(--accent-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">احترافية</span> تُغير مسار <span style="background: linear-gradient(to right, var(--accent-cyan), var(--primary-gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">علامتك</span></h1>
+        <h1 class="hero-title fade-in">
+          نحوّل الرؤية إلى واقع بصري<br>
+          <span class="grad-gold">تصاميم تحكي قصة</span>
+          <span class="grad-cyan">علامتك</span>
+        </h1>
         <p class="hero-subtitle fade-in">أحوّل الأفكار إلى تصاميم بصرية مبهرة تعكس قيم علامتك التجارية وتترك أثراً دائماً في أذهان العملاء</p>
         <div class="hero-btns fade-in">
           <a href="#portfolio" class="btn btn-primary">استكشف أعمالي</a>
@@ -2466,6 +2488,67 @@
       </div>
     </div>
   </section>
+
+  <style>
+    .portfolio-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .portfolio-modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: #0E0E3D;
+      padding: 30px;
+      border-radius: 18px;
+      width: min(1000px, 92%);
+      max-height: 85vh;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    .modal-title {
+      color: #CDA248;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: none;
+      border: none;
+      font-size: 32px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .modal-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .modal-gallery img {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .modal-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+  </style>
   <!-- Portfolio Section -->
   <section class="portfolio-section" id="portfolio">
     <div class="container">
@@ -2483,7 +2566,15 @@
       </div>
 
       <div class="portfolio-grid">
-        <div class="portfolio-item fade-in" data-category="logo">
+        <div class="portfolio-item fade-in" data-category="logo"  data-images="
+      https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80,
+       https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80,
+      https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80,
+       https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80,
+      https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80,
+       https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80,
+       https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80
+     ">
           <div class="portfolio-img-container">
             <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="بوستر" class="portfolio-img">
           </div>
@@ -2496,7 +2587,11 @@
           <div class="portfolio-deco">01</div>
         </div>
 
-        <div class="portfolio-item fade-in" data-category="social">
+        <div class="portfolio-item fade-in" data-category="social"   data-images="
+       assets/img/projects/coffee1.jpg,
+       assets/img/projects/coffee2.jpg,
+       assets/img/projects/coffee3.jpg
+     ">
           <div class="portfolio-img-container">
             <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="بطاقات" class="portfolio-img">
           </div>
@@ -2509,7 +2604,11 @@
           <div class="portfolio-deco">02</div>
         </div>
 
-        <div class="portfolio-item fade-in" data-category="poster">
+        <div class="portfolio-item fade-in" data-category="poster"   data-images="
+       assets/img/projects/coffee1.jpg,
+       assets/img/projects/coffee2.jpg,
+       assets/img/projects/coffee3.jpg
+     ">
           <div class="portfolio-img-container">
             <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="بوستر" class="portfolio-img">
           </div>
@@ -2522,7 +2621,11 @@
           <div class="portfolio-deco">03</div>
         </div>
 
-        <div class="portfolio-item fade-in" data-category="ui">
+        <div class="portfolio-item fade-in" data-category="ui"   data-images="
+       assets/img/projects/coffee1.jpg,
+       assets/img/projects/coffee2.jpg,
+       assets/img/projects/coffee3.jpg
+     ">
           <div class="portfolio-img-container">
             <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="واجهة" class="portfolio-img">
           </div>
@@ -2535,7 +2638,11 @@
           <div class="portfolio-deco">04</div>
         </div>
 
-        <div class="portfolio-item fade-in" data-category="logo">
+        <div class="portfolio-item fade-in" data-category="logo"   data-images="
+       assets/img/projects/coffee1.jpg,
+       assets/img/projects/coffee2.jpg,
+       assets/img/projects/coffee3.jpg
+     ">
           <div class="portfolio-img-container">
             <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="بوستر" class="portfolio-img">
           </div>
@@ -2548,7 +2655,11 @@
           <div class="portfolio-deco">05</div>
         </div>
 
-        <div class="portfolio-item fade-in" data-category="poster">
+        <div class="portfolio-item fade-in" data-category="poster"   data-images="
+       assets/img/projects/coffee1.jpg,
+       assets/img/projects/coffee2.jpg,
+       assets/img/projects/coffee3.jpg
+     ">
           <div class="portfolio-img-container">
             <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="بطاقات" class="portfolio-img">
           </div>
@@ -3333,6 +3444,45 @@
       </div>
     </div>
   </footer>
+
+  <div class="portfolio-modal" id="portfolioModal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <h3 class="modal-title">معرض المشروع</h3>
+      <div class="modal-gallery" id="modalGallery"></div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const modal = document.getElementById("portfolioModal");
+      const gallery = document.getElementById("modalGallery");
+      const closeBtn = document.querySelector(".modal-close");
+
+      document.querySelectorAll(".portfolio-item").forEach(item => {
+        item.addEventListener("click", () => {
+
+          const images = item.dataset.images?.split(",") || [];
+          gallery.innerHTML = "";
+
+          images.forEach(src => {
+            const img = document.createElement("img");
+            img.src = src.trim();
+            gallery.appendChild(img);
+          });
+
+          modal.classList.add("active");
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        modal.classList.remove("active");
+      });
+
+      modal.addEventListener("click", e => {
+        if (e.target === modal) modal.classList.remove("active");
+      });
+    });
+  </script>
 
   <a
           href="https://wa.me/966500000000"
